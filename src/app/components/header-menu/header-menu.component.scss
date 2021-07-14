@@ -1,0 +1,20 @@
+@import '../../../styles.scss';
+
+.usuario {
+    
+    color: white;
+    button {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        color: $color-white !important;
+        i {
+            color: $color-white;
+            }
+    }
+    nb-card {
+        position: absolute;
+        top: 4.1rem;
+        right: 0.5rem;
+    }
+}

@@ -1,0 +1,55 @@
+@import '~@nebular/theme/styles/theming';
+@import '~@nebular/theme/styles/themes/default';
+// Google font
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900&display=swap');
+
+$font-montserrat: Montserrat;
+
+$color-dark-shade-100: #1F2041FF;
+$color-dark-shade-75: #1F2041BF;
+$color-dark-shade-50: #1F204180;
+$color-dark-shade-25: #1F204140;
+$color-dark-shade-05: #1F20410D;
+$color-purple: #BC9CFF;
+$color-red: red;
+$color-grey: #CDCDCD;
+$color-white: #FFFFFF;
+$color-yellow: #FFE39C;
+$color-purple-linear: linear-gradient(180deg, $color-purple 0%, #8BA4F9 100%);
+$color-red-linear: linear-gradient(268.91deg, $color-red, rgb(94, 18, 18) 117.06%);
+$color-yellow-linear: linear-gradient(180deg, $color-yellow 0%, #FFBA9C 100%);
+
+$nb-themes: nb-register-theme((
+  font-family-primary: $font-montserrat,
+
+  button-filled-border-style: none,
+  button-rectangle-border-radius: 1.2rem,
+  button-text-font-weight: 700,
+  button-medium-text-font-size: 0.7rem,
+  button-medium-text-line-height: 1.8rem,
+
+  header-padding: 0rem 0rem 0rem 0rem,
+  footer-padding: 0rem 0rem 0rem 0rem,
+  header-height: auto,
+  header-shadow: none,
+  layout-small-padding: 0,
+
+  menu-item-icon-active-color: $color-red,
+  menu-item-active-text-color: $color-red,
+  menu-item-hover-text-color: $color-red,
+  menu-item-icon-hover-color: $color-red,
+
+  // select-item-active-text-color: $color-red,
+  // select-item-hover-text-color: $color-red,
+  // select-item-icon-hover-color: $color-red,
+
+  select-option-active-text-color: $color-red,
+  select-option-hover-text-color: $color-red,
+  select-option-icon-hover-color: $color-red,
+
+  // option-list-active-text-color: $color-red,
+  // option-list-hover-text-color: $color-red,
+  // option-list-icon-hover-color: $color-red,
+  
+
+), default, default);

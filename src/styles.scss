@@ -1,0 +1,279 @@
+/* You can add global styles to this file, and also import other style files */
+// :root {
+//     --color-dark-shade-100: #1F2041FF;
+//     --color-dark-shade-75: #1F2041BF;
+//     --color-dark-shade-50: #1F204180;
+//     --color-dark-shade-25: #1F204140;
+//     --color-dark-shade-05: #1F20410D;
+//     --color-purple: #BC9CFF;
+//     --color-red: #CDCDCD;
+//     --color-white: #FFFFFF;
+//     --color-purple-linear: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+//     --color-red-linear: linear-gradient(268.91deg, #6FCF97 6.17%, #66D2EA 117.06%);
+//     --color-yellow-linear: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+
+//     font-family: Montserrat;
+//     font-style: normal;
+// }
+
+
+/* You can add global styles to this file, and also import other style files */
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+// this is our just created themes.scss file, make sure the path to the file is correct
+@import 'themes';
+
+// framework component styles
+@import '~@nebular/theme/styles/globals';
+
+// install the framework styles
+@include nb-install() {
+  @include nb-theme-global();
+};
+
+$color-dark-shade-100: #1F2041FF;
+$color-dark-shade-75: #1F2041BF;
+$color-dark-shade-50: #1F204180;
+$color-dark-shade-25: #1F204140;
+$color-dark-shade-05: #1F20410D;
+$color-purple: #BC9CFF;
+// $color-red: #6FCF97;
+$color-red: red;
+$color-grey: #CDCDCD;
+$color-white: #FFFFFF;
+$color-purple-linear: linear-gradient(180deg, #3c3a3f 0%, #616369 100%);
+$color-red-linear: linear-gradient(268.91deg, red 6.17%, rgb(94, 18, 18) 117.06%);
+$color-yellow-linear: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+
+.degraded-red {
+  background: $color-red-linear;
+
+  
+}
+.degraded-red-shadow {
+  background: $color-red-linear;
+  box-shadow: 0px 4px 10px red;
+  
+}
+
+
+.degraded-purple {
+  background: $color-purple-linear;
+
+}
+
+.degraded-yellow {
+  background: $color-yellow-linear;
+}
+
+@mixin linear-gradient-text-color($color) {
+  background: $color;
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.header-text {
+    font-size: 1.5em;
+    white-space: pre;
+    height: 1.5em;
+    // padding-left: 3rem;
+    @include linear-gradient-text-color($color-red-linear);
+}
+
+.layout-header {
+  padding-left: 3rem;
+}
+
+.header-icon {
+  font-size: 2.5em;
+  // margin-right: 0.5rem;
+  height: 1.5em;
+    @include linear-gradient-text-color($color-red-linear);
+    
+}
+
+.alert-container {
+  border-radius:15px;
+  background-color: white;
+  margin: 0;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:70%;
+  padding: 0 5% 0 5%; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.alert-header {
+  span {
+    display:inline-block;
+    margin-right: 0.8rem;
+  }
+  h1 {
+    display: inline-block;
+    font-size: 1rem;
+  }
+}
+
+.alert-footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0 1rem 0 ;
+  button {
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+  }
+}
+
+.main-heading {
+  margin:20px 5px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20%;
+
+}
+
+.form-input {
+        margin: 1.25rem;
+        i {
+            position: fixed;
+            color: $color-grey;
+            margin-top: 0.9rem;
+            margin-left: 0.8rem;
+        }
+        input {
+            margin: 0 0 1.5rem 0;
+            border: 1px solid $color-grey;
+            box-sizing: border-box;
+            border-radius: 20px;
+            height: 3.3rem;
+            background: $color-white;
+            text-indent: 28px;
+            font-weight: normal;
+        }
+        p {
+          background: $color-dark-shade-100;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 700;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          
+        }
+      }
+
+      input {
+        margin: 0 0 1.5rem 0;
+        border: 1px solid $color-grey;
+        box-sizing: border-box;
+        border-radius: 20px;
+        height: 3.3rem;
+        background: $color-white;
+        text-indent: 28px;
+        font-weight: normal;
+    }
+
+    .form-select {
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      p {
+            background: $color-dark-shade-100;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+      }
+      .select-button {
+        margin: 0 0 0 1.5rem;
+      }
+    }
+
+    // .form-select {
+    //   margin: 1.25rem;
+    //   i {
+    //       position: fixed;
+    //       color: $color-grey;
+    //       margin-top: 0.9rem;
+    //       margin-left: 0.8rem;
+    //   }
+    //   .select-button {
+    //       margin: 0 0 1.5rem 0;
+    //       border: 1px solid $color-grey;
+    //       box-sizing: border-box;
+    //       border-radius: 20px;
+    //       height: 3.3rem;
+    //       background: $color-white;
+    //       text-indent: 28px;
+    //       font-weight: normal;
+    //   }
+    //   p {
+    //     background: $color-dark-shade-100;
+    //     background-clip: text;
+    //     -webkit-text-fill-color: transparent;
+    //     font-weight: 700;
+    //     font-size: 0.8rem;
+    //     text-transform: uppercase;
+        
+    //   }
+    // }
+        
+@mixin nb-b-forms-theme() {
+
+  .form-control {
+    background-color: nb-theme(input-basic-background-color);
+    border-color: nb-theme(input-basic-border-color);
+    border-style: nb-theme(input-border-style);
+    border-width: nb-theme(input-border-width);
+    color: nb-theme(input-basic-text-color);
+    font-family: nb-theme(input-text-font-family);
+    @include nb-component-animation(border, background-color, color);
+
+    &::placeholder {
+      color: nb-theme(input-basic-placeholder-text-color);
+      font-family: nb-theme(input-placeholder-text-font-family);
+      text-overflow: ellipsis;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: nb-theme(red);
+    }
+
+    &:hover {
+      border-color: nb-theme(input-basic-hover-border-color);
+    }
+
+    &:disabled {
+      background-color: nb-theme(input-basic-disabled-background-color);
+      border-color: nb-theme(input-basic-disabled-border-color);
+      color: nb-theme(input-basic-disabled-text-color);
+
+      &::placeholder {
+        color: nb-theme(input-basic-disabled-placeholder-text-color);
+      }
+    }
+
+    &.input-full-width {
+      width: 100%;
+    }
+  }
+
+  @include form-control-size();
+  @include form-control-default();
+}
+
+.nb-theme-default nb-select.appearance-outline .select-button:hover {
+border-color: red !important;
+}
+
+.nb-theme-default nb-select.appearance-outline .select-button:focus {
+  border-color: red !important;
+  }
+
+  .nb-theme-default nb-option.selected, .nb-theme-default nb-calendar-day-picker nb-option.range-cell.start, .nb-theme-default nb-calendar-day-picker nb-option.range-cell.end {
+color: red !important;
+  }

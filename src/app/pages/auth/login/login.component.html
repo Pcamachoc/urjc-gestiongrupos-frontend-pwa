@@ -1,0 +1,16 @@
+<div class="background">
+  <div [formGroup]="form" class="app-content">
+    <div class="form-input">
+      <p>Usuario</p>
+      <i class="material-icons">person</i>
+      <input formControlName="user" type="text" nbInput fullWidth placeholder="Usuario">
+      <p>Contraseña</p>
+      <i class="material-icons">https</i>
+      <input formControlName="password" type="password" nbInput fullWidth placeholder="Contraseña">
+    </div>
+    <div class="button">
+      <button class="degraded-red-shadow" (click)="login()" type="button" nbButton fullWidth status="primary">Iniciar
+        sesión</button>
+    </div>
+  </div>
+  </div>

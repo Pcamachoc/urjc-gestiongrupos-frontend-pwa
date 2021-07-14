@@ -1,0 +1,37 @@
+<app-header-menu></app-header-menu>
+<nb-layout-header class="layout-header">
+  <button nbButton ghost size="tiny" (click)="volver()">
+    <span class="material-icons header-icon">keyboard_arrow_left</span>
+  </button>
+  <p class="header-text">
+    <strong>Consultar</strong> voto
+  </p>
+</nb-layout-header>
+<div class="main-heading">
+  {{callVote?.name}}
+</div>
+<nb-card class="card">
+  <nb-card-body class="card-body">
+    <div class="title">
+      Hash de la transacción:
+    </div>
+    <div class="hash">
+      {{vote?.tx_id}}
+    </div>
+    <div class="title">
+      Fecha de la transacción:
+    </div>
+    <p>Día: {{formatDay(vote?.date)}} / Hora: {{formatHour(vote?.date)}}</p>
+    <div class="title">
+      Resumen de la votación:
+    </div>
+    <nb-icon class="icono margin-app" icon="plus-outline"></nb-icon>
+    <div class="margin-app" *ngFor="let member of vote?.value.proposalsVote">
+      {{member.option}}  {{member.nameProposal}}
+    </div>
+    <nb-icon class="icono margin-app" icon="minus-outline"></nb-icon>
+    <div class="confirm-button">
+      <button class="degraded-purple" (click)="return()" type="button" nbButton status="primary">Volver</button>
+    </div>
+  </nb-card-body>
+</nb-card>

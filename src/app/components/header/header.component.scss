@@ -1,0 +1,34 @@
+@import '../../../styles.scss';
+    .header {
+        background: red;
+        width: 100%;
+        height: 5px;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: black;
+        width: 100%;
+        height: 60px;
+
+        button {
+            
+            height: 3.8rem;
+            width: 3.8rem;
+            border-radius: 20rem;
+            i {
+            color: $color-white;
+            }
+          }
+    }
+
+    img.header-image {
+        width: auto;
+        height: 100%;
+        padding: 5px 5px 5px 5px;
+    }
+

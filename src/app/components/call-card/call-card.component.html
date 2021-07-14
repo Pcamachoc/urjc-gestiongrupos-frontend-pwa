@@ -1,0 +1,49 @@
+<nb-card class="card">
+    <nb-card-body class="card-body">
+        <div class="card-name" (click)="loadExtendedCall()">
+            {{call.name}}
+        </div>
+        <div *ngIf="showDetails">
+            <div class="agenda">
+                <p>Enunciado</p>
+                <div (click)='openFile()'>
+                    <span class="material-icons">cloud_download</span>
+                </div>
+            </div>
+            <div class="card-subtitle">
+                Compañeros:
+            </div>
+            <ul *ngFor="let member of groupMembers">
+                <li>
+                    {{member.name}}
+                </li>
+            </ul>
+            <div class="card-subtitle">
+                Grupo: {{group}}
+            </div>
+
+        </div>
+        <p>
+            {{formatDay(call.initDate)}} / {{formatDay(call.endDate)}}
+        </p>
+        <div class="card-functionalities">
+            <div *ngIf="!callAlreadyVoted()">
+                <div *ngIf="expiredTime(); else elseblock">
+                    <button type="button" [disabled]="expiredTime()" (click)="addVote()" nbButton
+                        status="primary">Votar</button>
+                </div>
+                <ng-template #elseblock>
+                    <button class="degraded-red" type="button" [disabled]="expiredTime()" (click)="addVote()" nbButton
+                        status="primary">Votar</button>
+                </ng-template>
+            </div>
+            <div *ngIf="callAlreadyVoted()">
+                <button class="degraded-red" type="button" (click)="consultVote()" nbButton status="primary">Consultar
+                    voto</button>
+            </div>
+            <div *ngIf="consultResultTime()">
+                <button type="button" (click)="callResults()" nbButton status="primary">Consultar resultado</button>
+            </div>
+        </div>
+    </nb-card-body>
+</nb-card>

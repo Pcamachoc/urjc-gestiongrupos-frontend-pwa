@@ -1,0 +1,14 @@
+<app-header-menu></app-header-menu>
+<nb-layout-header class="layout-header">
+    <p class="header-text margin-app">
+        <strong>Asignaturas</strong> disponibles
+    </p>
+</nb-layout-header>
+<div class="margin-app" *ngFor="let callGrouped of callsGrouped">
+    <div class="main-heading">
+        {{callGrouped.subject}}
+    </div>
+    <div *ngFor="let call of callGrouped.items">
+        <appgg-call-card [call]="call" (deleted)="loadCalls()"></appgg-call-card>
+    </div>
+</div>

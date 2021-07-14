@@ -1,0 +1,54 @@
+@import '../../../../styles.scss';
+
+.layout-header {
+    margin-bottom: 20px;
+    img.header {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.main-heading {
+    margin:20px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 15%;
+    padding-right: 15%;
+
+}
+
+.card {
+    margin-top:20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    .proposal {
+        font-size: 16px;
+        line-height: 1.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .confirm-button {
+        display: flex;
+        justify-content: center;
+        margin-top:30px;
+    }
+}
+
+.margin-app {
+    margin-left: 10px;
+}
+
+.icono {
+    color:  red;
+    margin-left: -15px !important;
+}
+
+// nb-option {
+//     margin-left: 3rem;
+// }
+
+.number {
+    width: 1rem;
+    margin-left: 1.5rem;
+}

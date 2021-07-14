@@ -1,0 +1,29 @@
+@mixin flex() {
+    display: flex;
+    justify-content: center;
+}
+
+.layout-header {
+  margin-bottom: 20px;
+  img.header {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.main-heading {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.demo-chart {
+  height: 450px;
+  margin-top: 40px;
+}
+
+.proposal-heading {
+  @include flex();
+  font-size: 16px;
+  line-height: 1.5em;
+  margin:0;
+}

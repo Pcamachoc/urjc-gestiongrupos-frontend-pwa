@@ -1,0 +1,9 @@
+<div class="usuario">   
+    <button (click)="menu()" type="button" nbButton ghost>
+        {{usuario.sub.name}}
+        <i class="material-icons">arrow_drop_down</i>
+</button>
+<nb-card *ngIf="expanded">
+    <nb-menu [items]="items"></nb-menu>
+</nb-card> 
+</div>

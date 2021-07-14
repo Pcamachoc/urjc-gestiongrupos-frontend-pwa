@@ -1,0 +1,8 @@
+<nb-card>
+  <nb-card-header>{{title}}</nb-card-header>
+  <nb-card-body>{{message}}</nb-card-body>
+  <nb-card-footer class="footer">
+    <button class="degraded-red" nbButton (click)="acceptHandler()">{{aceptButton}}</button>
+    <button class="degraded-purple" nbButton (click)="cancelHandler()">{{cancelButton}}</button>
+  </nb-card-footer>
+</nb-card>

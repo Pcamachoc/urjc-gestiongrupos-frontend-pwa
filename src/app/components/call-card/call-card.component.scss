@@ -1,0 +1,93 @@
+@import '../../../themes.scss';
+
+@mixin paragraphStyles($font-weight: 300, $font-size: 0.8rem, $line-height: 1rem) {
+    margin-top: 0;
+    color: black;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+@mixin circles($size, $margin-right: 1.5rem) {
+  display: inline-flex;
+  border: 2px solid rgba(31, 32, 65, 0.75);
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  height: $size;
+  width: $size;
+  margin-right: $margin-right;
+  justify-content: center;
+  align-items: center;
+}
+
+$card-color: rgb(206, 194, 194);
+
+.card {
+  margin-top: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+
+  .card-body {
+    padding-top: 20;
+    font-weight: bold;
+
+    .card-name {
+      font-size: 20px;
+      line-height: 1.5rem;
+      cursor: pointer;
+    }
+    .card-agenda {
+      margin: 10px;
+      cursor: pointer;
+    }
+    .card-subtitle {
+      font-size: 16px;
+      line-height: 1.5rem;
+      font-weight: bold;
+      margin: 10px;
+    }
+    .date {
+      margin: 10px;
+      font-size: 14px;
+      font-weight:normal,
+    }
+    .card-functionalities {
+      border-top-style: solid;
+      border-top-color: $card-color;
+      margin-top: 20px;
+
+      button {
+        margin-top: 20px;
+      }
+
+      nb-icon {
+        height: 30px;
+        width: 30px;
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    }
+  }
+}
+
+.agenda {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    @include paragraphStyles(normal, 1.1rem, 1.4rem);
+    margin-bottom: 0;
+  }
+
+  div {
+    @include circles(2rem, none);
+    cursor: pointer;
+
+    span {
+      color: rgba(31, 32, 65, 0.75);
+      font-size: 1.25rem;
+    }
+  } 
+}

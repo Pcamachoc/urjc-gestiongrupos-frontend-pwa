@@ -1,0 +1,45 @@
+@import '../../../../styles.scss';
+
+@mixin flex() {
+    display: flex;
+    justify-content: center;
+}
+
+.form-input {
+    p {
+        background: $color-red-linear;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.button {
+    @include flex();
+    margin: 1.25rem;
+    .degraded-red-shadow {
+        width: 90%;
+        }
+}
+
+.app-content {
+    width: 30rem;
+    padding: 2.5rem 2.5rem 0.75rem !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+input {
+    &:focus {
+        outline: none;
+        border-color: red !important;
+      }
+    
+}
+
+ 

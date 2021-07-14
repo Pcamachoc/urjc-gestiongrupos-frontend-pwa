@@ -1,0 +1,9 @@
+<div class="main-heading">
+  Resultados: {{call.name}}
+</div>
+<div *ngFor="let option of options">
+  <div class="proposal-heading">
+    {{option.title.text}}
+  </div>
+  <div echarts [options]="option" class="demo-chart"></div>
+</div>

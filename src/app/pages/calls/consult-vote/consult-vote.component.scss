@@ -1,0 +1,59 @@
+@import '../../../../styles.scss';
+
+.layout-header {
+    margin-bottom: 20px;
+    img.header {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.main-heading {
+    margin:20px 5px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.card {
+    margin-top:20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    .proposal {
+        font-size: 16px;
+        line-height: 1.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 20px;
+        line-height: 1.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .hash {
+        font-size: 14px;
+        line-height: 1.5rem;
+        margin-top: 20px;
+        overflow-wrap: break-word;
+    }
+
+    .confirm-button {
+        display: flex;
+        justify-content: center;
+        margin-top:30px;
+    }
+}
+
+.icono {
+    color:  red;
+    margin-left: -3px !important;
+}
+
+.margin-app {
+    margin-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+}

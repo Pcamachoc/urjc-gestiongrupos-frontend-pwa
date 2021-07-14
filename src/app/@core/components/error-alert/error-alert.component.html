@@ -1,0 +1,10 @@
+<nb-card>
+  <nb-card-header>
+    {{message}}
+  </nb-card-header>
+  <nb-card-body class="card-body">
+    <nb-alert status="primary" closable (close)="onClose()">
+      {{description}}
+    </nb-alert>
+  </nb-card-body>
+</nb-card>
